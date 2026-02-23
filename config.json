@@ -1,0 +1,104 @@
+{
+  "system": {
+    "name": "PhysioSafe VR Safety System",
+    "version": "1.0.0",
+    "description": "Real-time safety monitoring for physiotherapy exercises"
+  },
+  "demo_mode": {
+    "enabled": true,
+    "exercise": "shoulder_flexion",
+    "disable_multi_exercise_switching": true,
+    "disable_advanced_analytics": true
+  },
+  "safety_thresholds": {
+    "shoulder": {
+      "flexion": {
+        "safe_max": 120,
+        "warning_max": 100,
+        "danger_threshold": 130,
+        "unit": "degrees"
+      },
+      "extension": {
+        "safe_max": 60,
+        "warning_max": 45,
+        "danger_threshold": 70,
+        "unit": "degrees"
+      },
+      "abduction": {
+        "safe_max": 150,
+        "warning_max": 120,
+        "danger_threshold": 165,
+        "unit": "degrees"
+      },
+      "adduction": {
+        "safe_max": 45,
+        "warning_max": 30,
+        "danger_threshold": 55,
+        "unit": "degrees"
+      }
+    },
+    "elbow": {
+      "flexion": {
+        "safe_max": 150,
+        "warning_max": 120,
+        "danger_threshold": 160,
+        "unit": "degrees"
+      },
+      "extension": {
+        "safe_max": 10,
+        "warning_max": 5,
+        "danger_threshold": -5,
+        "unit": "degrees"
+      },
+      "hyperextension": {
+        "safe_max": 0,
+        "warning_max": -3,
+        "danger_threshold": -5,
+        "unit": "degrees"
+      }
+    },
+    "wrist": {
+      "flexion": {
+        "safe_max": 80,
+        "warning_max": 60,
+        "danger_threshold": 90,
+        "unit": "degrees"
+      },
+      "extension": {
+        "safe_max": 70,
+        "warning_max": 55,
+        "danger_threshold": 80,
+        "unit": "degrees"
+      },
+      "radial_deviation": {
+        "safe_max": 20,
+        "warning_max": 15,
+        "danger_threshold": 25,
+        "unit": "degrees"
+      },
+      "ulnar_deviation": {
+        "safe_max": 30,
+        "warning_max": 25,
+        "danger_threshold": 35,
+        "unit": "degrees"
+      }
+    }
+  },
+  "confidence": {
+    "min_threshold": 0.6,
+    "low_confidence_action": "warning"
+  },
+  "output": {
+    "format": "json",
+    "refresh_rate_ms": 33,
+    "suppress_repeated_warnings": true,
+    "overlay": {
+      "show_current_angle": true,
+      "show_phase": true,
+      "show_safety_status": true,
+      "show_correction_line": true,
+      "show_frame_stability": true,
+      "min_message_cooldown_seconds": 2
+    }
+  }
+}

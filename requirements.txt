@@ -1,0 +1,10 @@
+# PhysioSafe VR Safety System - Dependencies
+# Demo Mode (Hardened)
+
+# Core dependencies
+numpy>=1.21.0
+opencv-python>=4.5.0
+
+# Optional: MediaPipe for pose detection
+# Uncomment if you want to use webcam tracking
+# mediapipe>=0.8.9
