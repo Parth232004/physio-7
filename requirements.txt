@@ -5,6 +5,10 @@
 numpy>=1.21.0
 opencv-python>=4.5.0
 
+# API server
+fastapi>=0.110
+uvicorn[standard]>=0.27
+
 # Optional: MediaPipe for pose detection
 # Uncomment if you want to use webcam tracking
 # mediapipe>=0.8.9
