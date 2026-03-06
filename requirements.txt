@@ -1,5 +1,5 @@
 # PhysioSafe VR Safety System - Dependencies
-# Demo Mode (Hardened)
+# Full VR Integration
 
 # Core dependencies
 numpy>=1.21.0
@@ -8,6 +8,12 @@ opencv-python>=4.5.0
 # API server
 fastapi>=0.110
 uvicorn[standard]>=0.27
+
+# System health monitoring
+psutil>=5.9.0
+
+# WebSocket support (for live streaming)
+websocket-client>=1.6.0
 
 # Optional: MediaPipe for pose detection
 # Uncomment if you want to use webcam tracking
